@@ -13,6 +13,7 @@ class Product(models.Model):
     rating=models.FloatField(max_length=10)
     image=models.ImageField(upload_to=rename_image)
     description=models.TextField()
+    offer=models.FloatField(max_length=10,null=True, blank=True)
     def __str__(self):
         return self.name
 # Create your models here.
