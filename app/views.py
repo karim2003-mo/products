@@ -10,7 +10,8 @@ def veiwproducts(request):
             'category':product.category,
             'rating':product.rating,
             'image':product.image.url if product.image else None,  # Ensure image URL is valid
-            'description':product.description
+            'description':product.description,
+            'offer':product.offer if product.offer else None  # Handle offer being None 
         }
         datalist.append(mp)
     return JsonResponse({"products":datalist})
