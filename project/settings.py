@@ -29,7 +29,9 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.then-gussi-karim2003-acc55ad1.koyeb.app"
+]
 INSTALLED_APPS = [
     "app",
     'django.contrib.admin',
